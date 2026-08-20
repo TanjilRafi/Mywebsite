@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tanjil Sarker Rafi — Portfolio</title>
+<meta name="description" content="Tanjil Sarker Rafi — Computing Science student at the University of Alberta. Full-stack software engineer focused on optimized code, async Python, caching, and robust error handling." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<canvas id="particle-canvas"></canvas>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#hero" class="brand">
+      <span class="brand__mark">TR</span>
+      <span class="brand__name" data-i18n="nav.name">Tanjil Sarker Rafi</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#techstack" data-i18n="nav.tech">Tech Stack</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+        <span class="lang-toggle__opt is-active" data-lang="en">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span class="lang-toggle__opt" data-lang="fr">FR</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO / ABOUT ================= -->
+  <section class="section hero" id="hero">
+    <div class="section__decor hero__decor" aria-hidden="true">
+      <svg viewBox="0 0 200 200" class="poly poly--1"><polygon points="100,10 190,60 190,140 100,190 10,140 10,60" /></svg>
+      <svg viewBox="0 0 200 200" class="poly poly--2"><circle cx="100" cy="100" r="70" /></svg>
+      <svg viewBox="0 0 200 200" class="poly poly--3"><polygon points="100,20 180,180 20,180" /></svg>
+    </div>
+
+    <div class="container hero__grid" id="about">
+      <p class="eyebrow" data-i18n="hero.eyebrow">INTRODUCTION</p>
+      <h1 class="display" data-i18n="hero.title">Overview.</h1>
+      <p class="lede" data-i18n="hero.body">
+        Hey, I'm Tanjil — a Computing Science student at the University of Alberta with a deep
+        passion for full-stack software engineering. I care about writing code that's not just
+        correct, but optimized and refactored to be lean, readable, and built to last. I spend a
+        lot of time in the weeds of Python asynchronous execution, caching strategies, and robust
+        error handling — the kind of details that keep systems fast and dependable under real load.
+        I'm always looking for the next hard problem to build my way through.
+      </p>
+      <div class="hero__actions">
+        <a class="btn-pill" id="resume-btn" href="assets/resume/Tanjil_Rafi_Resume.pdf" target="_blank" rel="noopener">
+          <span data-i18n="hero.resume">View Resume</span>
+        </a>
+        <a class="btn-ghost" href="#projects" data-i18n="hero.work">See my work →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECH STACK ================= -->
+  <section class="section techstack" id="techstack">
+    <div class="container">
+      <p class="eyebrow" data-i18n="tech.eyebrow">WHAT I KNOW</p>
+      <h2 class="display display--sm" data-i18n="tech.title">Tech Stack.</h2>
+
+      <div class="tech-grid" id="tech-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <p class="eyebrow" data-i18n="exp.eyebrow">WHERE I'VE BEEN</p>
+      <h2 class="display display--sm" data-i18n="exp.title">Experience.</h2>
+
+      <div class="timeline">
+        <div class="timeline__line" aria-hidden="true"></div>
+
+        <article class="timeline__item">
+          <div class="timeline__node"></div>
+          <div class="glass glow-border timeline__card" data-reveal>
+            <span class="timeline__date" data-i18n="exp.ta.date">Sep 2025 — Dec 2025</span>
+            <h3 data-i18n="exp.ta.role">Teaching Assistant, Introductory Programming (CMPUT 174)</h3>
+            <p class="timeline__org" data-i18n="exp.ta.org">University of Alberta · Edmonton, AB</p>
+            <ul>
+              <li data-i18n="exp.ta.b1">Evaluated and graded student Python code for correctness, style, and understanding of core programming concepts.</li>
+              <li data-i18n="exp.ta.b2">Held one-on-one and group sessions, breaking down concepts for students at very different skill levels.</li>
+              <li data-i18n="exp.ta.b3">Gave clear, constructive feedback that helped students debug their own logic rather than just fixing it for them.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline__item">
+          <div class="timeline__node"></div>
+          <div class="glass glow-border timeline__card" data-reveal>
+            <span class="timeline__date" data-i18n="exp.intern.date">May 2024 — Sep 2024</span>
+            <h3 data-i18n="exp.intern.role">Software Developer Intern</h3>
+            <p class="timeline__org" data-i18n="exp.intern.org">Nexfolyo (Hybrid) · Edmonton, AB</p>
+            <ul>
+              <li data-i18n="exp.intern.b1">Built full-stack, user-facing React.js components as part of a 6–7 person Agile team.</li>
+              <li data-i18n="exp.intern.b2">Took part in rigorous code reviews, tightening up code quality and catching edge cases before they shipped.</li>
+              <li data-i18n="exp.intern.b3">Tracked, triaged, and resolved issues collaboratively through Git and GitHub workflows.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <p class="eyebrow" data-i18n="proj.eyebrow">WHAT I'VE BUILT</p>
+      <h2 class="display display--sm" data-i18n="proj.title">Projects.</h2>
+
+      <div class="project-grid" id="project-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact">
+    <div class="container contact__grid">
+      <div>
+        <p class="eyebrow" data-i18n="contact.eyebrow">GET IN TOUCH</p>
+        <h2 class="display display--sm" data-i18n="contact.title">Contact.</h2>
+        <p class="lede" data-i18n="contact.body">
+          Have a role, a project, or just a hard problem you want to talk through? My inbox is open.
+        </p>
+      </div>
+
+      <div class="glass glow-border contact__card" data-reveal>
+        <a class="contact__row" href="mailto:tanjilsarker77@gmail.com">
+          <span class="contact__icon" aria-hidden="true">✉</span>
+          <span>tanjilsarker77@gmail.com</span>
+        </a>
+        <a class="contact__row" href="#" id="github-link">
+          <span class="contact__icon" aria-hidden="true">⌥</span>
+          <span data-i18n="contact.github">GitHub — add your profile link</span>
+        </a>
+        <a class="contact__row" href="#" id="linkedin-link">
+          <span class="contact__icon" aria-hidden="true">in</span>
+          <span data-i18n="contact.linkedin">LinkedIn — add your profile link</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Tanjil Sarker Rafi. <span data-i18n="footer.rights">All rights reserved.</span></p>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
