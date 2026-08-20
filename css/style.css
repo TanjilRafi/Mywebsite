@@ -472,6 +472,45 @@ main, .navbar, .footer{ position: relative; z-index: 1; }
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+.footer__build{
+  max-width: 640px;
+  margin: 0 auto 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer__badges{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.footer__badges img{
+  width: 26px; height: 26px;
+  padding: 6px;
+  border-radius: 10px;
+  background: linear-gradient(160deg, rgba(255,255,255,0.92), rgba(210,215,235,0.7));
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.footer__badges img:hover{
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 10px 22px -10px var(--cyan);
+}
+
+.footer__build-line{
+  color: var(--ink-dim);
+  font-size: 13.5px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.footer__build-sub{
+  color: var(--ink-faint);
+  font-size: 12.5px;
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* ============ Responsive ============ */
 @media (max-width: 980px){
   .project-grid{ grid-template-columns: repeat(2, 1fr); }

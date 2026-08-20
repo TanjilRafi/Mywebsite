@@ -5,6 +5,7 @@ University of Alberta. Built to showcase full-stack projects, technical experien
 and a resume in a fast, dependency-free static site.
 
 **Live site:** _add deployed URL here_
+**GitHub:** [github.com/TanjilRafi](https://github.com/TanjilRafi) · **LinkedIn:** [linkedin.com/in/tanjil-rafi](https://linkedin.com/in/tanjil-rafi-4b3b47391)
 
 ## Overview
 
