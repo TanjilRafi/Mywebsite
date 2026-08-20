@@ -59,8 +59,11 @@
 
   /* ================= Navbar scroll state ================= */
   const navbar = document.getElementById("navbar");
+  const navbarRim = "inset 0 -1px 0 rgba(255,255,255,0.04)";
   window.addEventListener("scroll", () => {
-    navbar.style.boxShadow = window.scrollY > 12 ? "0 12px 30px -20px rgba(0,0,0,0.6)" : "none";
+    navbar.style.boxShadow = window.scrollY > 12
+      ? `${navbarRim}, 0 12px 30px -20px rgba(0,0,0,0.6)`
+      : navbarRim;
   });
 
   /* ================= Mobile nav toggle ================= */
@@ -104,7 +107,7 @@
     const grid = document.getElementById("tech-grid");
     grid.innerHTML = TECH_STACK.map(
       (t, i) => `
-      <div class="tech-item" style="animation-delay:${(i % 6) * 0.35}s">
+      <div class="tech-item" data-reveal style="animation-delay:${(i % 6) * 0.35}s; --reveal-delay:${(i % 8) * 55}ms">
         <span class="tech-item__icon">
           <img src="${t.icon}" alt="${t.name}" loading="lazy" />
         </span>
@@ -116,12 +119,12 @@
   /* ================= Projects render ================= */
   function renderProjects(lang) {
     const grid = document.getElementById("project-grid");
-    grid.innerHTML = PROJECTS.map((p) => {
+    grid.innerHTML = PROJECTS.map((p, i) => {
       const tags = p.tags
         .map((tag) => `<span style="color:${TAG_COLORS[tag] || "var(--cyan)"}">#${tag}</span>`)
         .join(" ");
       return `
-      <article class="glass glow-border project-card" data-reveal>
+      <article class="glass glow-border project-card" data-reveal style="--reveal-delay:${(i % 6) * 90}ms">
         <div class="project-card__cover" style="background: linear-gradient(150deg, var(--${p.accent}) -40%, #0a0c1e 70%)">
           <div class="project-card__links">
             <a href="${p.github}" target="_blank" rel="noopener" aria-label="GitHub repository for ${p.title}">
